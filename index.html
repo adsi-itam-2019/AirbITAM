@@ -6,13 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
-    <script type="text/javascript" src="script.js"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/0.53.1/mapbox-gl.css">
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     <title>AirbITAM</title>
+    <script>
+        function activeModal(accion) {
+            var modal = document.getElementById(accion);
+            if (!modal.classList.contains("is-active")) {
+                modal.classList.add("is-active");
+            } else {
+                modal.classList.remove("is-active");
+            }
+        }
+    </script>
 </head>
 
 <body>
@@ -22,7 +31,7 @@
             <header class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a class="navbar-item">
+                        <a href="index.html" class="navbar-item">
                             <!--img class="" src="logo.png" alt="Logo"-->
                             <p class="subtitle">AirbITAM</p>
                         </a>
@@ -34,15 +43,20 @@
                     </div>
                     <div id="navbarMenu" class="navbar-menu">
                         <div class="navbar-end">
-                            <a href="index.html" class="navbar-item is-active">
-                                Home
-                            </a>
                             <span class="navbar-item">
-                                <a class="button is-inverted" onclick="activeModal()">
+                                <a class="button is-inverted" onclick="activeModal('register')">
+                                    <span class="icon">
+                                        <i class="fas fa-user-plus"></i>
+                                    </span>
+                                    <span>Regístrate</span>
+                                </a>
+                            </span>
+                            <span class="navbar-item">
+                                <a class="button is-info" onclick="activeModal('login')">
                                     <span class="icon">
                                         <i class="fas fa-user-lock"></i>
                                     </span>
-                                    <span>Usuarios</span>
+                                    <span>Inicia sesión</span>
                                 </a>
                             </span>
                         </div>
@@ -104,7 +118,7 @@
                             <div class="content">
                                 Cuarto amueblado en colonia Altavista a 15 minutos del ITAM.
                                 Todos los servicios incluidos.
-                                <br>
+                                <br><br>
                                 <time datetime="2019-1-1">Publicado: Enero 2019</time>
                             </div>
                         </div>
@@ -131,7 +145,7 @@
                             <div class="content">
                                 Cuarto amueblado en colonia del Valle Sur, cuenta con cajon de
                                 estacionamiento e internet de alta velociad, servicios incluidos.
-                                <br>
+                                <br><br>
                                 <time datetime="2019-2-1">Publicado: Febrero 2019</time>
                             </div>
                         </div>
@@ -228,7 +242,7 @@
         <div class="modal-card">
             <header class="modal-card-head">
                 <p class="modal-card-title">Iniciar sesión</p>
-                <button class="delete" aria-label="close" onclick="activeModal()"></button>
+                <button class="delete" aria-label="close" onclick="activeModal('login')"></button>
             </header>
             <section class="modal-card-body">
                 <!-- Content ... -->
@@ -236,19 +250,19 @@
                 <br>
                 <div class="field">
                     <p class="control has-icons-left has-icons-right">
-                        <input class="input is-medium" type="email" placeholder="Email">
-                        <span class="icon is-medium is-left">
+                        <input class="input" type="email" placeholder="Email">
+                        <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
-                        <span class="icon is-medium is-right">
+                        <span class="icon is-small is-right">
                             <i class="fas fa-check"></i>
                         </span>
                     </p>
                 </div>
                 <div class="field">
                     <p class="control has-icons-left">
-                        <input class="input is-medium" type="password" placeholder="Contraseña">
-                        <span class="icon is-medium is-left">
+                        <input class="input" type="password" placeholder="Contraseña">
+                        <span class="icon is-small is-left">
                             <i class="fas fa-lock"></i>
                         </span>
                     </p>
@@ -256,8 +270,99 @@
             </section>
 
             <footer class="modal-card-foot">
-                <button class="button is-success">Inicia sesión</button>
-                <button class="button" onclick="activeModal()">Cancelar</button>
+                <button class="button is-link">Inicia sesión</button>
+                <button class="button" onclick="activeModal('login')">Cancelar</button>
+            </footer>
+        </div>
+    </div>
+
+    <div class="modal" id="register">
+        <div class="modal-background"></div>
+        <div class="modal-card">
+            <header class="modal-card-head">
+                <p class="modal-card-title">Registro</p>
+                <button class="delete" aria-label="close" onclick="activeModal('register')"></button>
+            </header>
+            <section class="modal-card-body">
+                <div class="field">
+                    <label class="label">Nombre</label>
+                    <div class="control">
+                        <input class="input" type="text" placeholder="Nombre completo">
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Usuario</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-success" type="text" placeholder="Text input" value="bulma">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-user"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-check"></i>
+                        </span>
+                    </div>
+                    <p class="help is-success">This username is available</p>
+                </div>
+
+                <div class="field">
+                    <label class="label">Email</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                    <p class="help is-danger">This email is invalid</p>
+
+                    <label class="label">Contraseña</label>
+                    <div class="control has-icons-left has-icons-right">
+                        <input class="input" type="password" placeholder="Email input" value="hello@">
+                        <span class="icon is-small is-left">
+                            <i class="fas fa-envelope"></i>
+                        </span>
+                        <span class="icon is-small is-right">
+                            <i class="fas fa-exclamation-triangle"></i>
+                        </span>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Soy</label>
+                    <div class="control">
+                        <div class="select">
+                            <select>
+                                <option>Arrendador</option>
+                                <option>Rentero</option>
+                            </select>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label">Descripción</label>
+                    <div class="control">
+                        <textarea class="textarea" placeholder="Cuéntanos un poco sobre ti"></textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <div class="control">
+                        <label class="checkbox">
+                            <input type="checkbox">
+                            Acepto los <a href="#">terminos y condiciones</a>
+                        </label>
+                    </div>
+                </div>
+
+            </section>
+
+            <footer class="modal-card-foot">
+                <button class="button is-link">Registrar</button>
+                <button class="button" onclick="activeModal('register')">Cancelar</button>
             </footer>
         </div>
     </div>
