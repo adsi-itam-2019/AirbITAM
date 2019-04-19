@@ -10,6 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/mapbox-gl/0.53.1/mapbox-gl.css">
+    <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     <title>AirbITAM</title>
 </head>
 
@@ -32,14 +34,8 @@
                     </div>
                     <div id="navbarMenu" class="navbar-menu">
                         <div class="navbar-end">
-                            <a class="navbar-item is-active">
+                            <a href="index.html" class="navbar-item is-active">
                                 Home
-                            </a>
-                            <a class="navbar-item">
-                                Examples
-                            </a>
-                            <a class="navbar-item">
-                                Documentation
                             </a>
                             <span class="navbar-item">
                                 <a class="button is-inverted" onclick="activeModal()">
@@ -60,6 +56,8 @@
             <div class="container has-text-centered">
                 <h1 class="title"> Bienvenido a AirbITAM</h1>
                 <h2 class="subtitle">Encuentra alojamiento en CDMX con cercanía al ITAM </h2>
+                <button class="button">Busco alojamiento</button>
+                <button class="button">Ofrezco alojamiento</button>
             </div>
         </div>
 
@@ -68,12 +66,11 @@
             <nav class="tabs is-boxed is-fullwidth">
                 <div class="container">
                     <ul>
-                        <li class="is-active"><a>Overview</a></li>
-                        <li><a>Modifiers</a></li>
-                        <li><a>Grid</a></li>
-                        <li><a>Elements</a></li>
-                        <li><a>Components</a></li>
-                        <li><a>Layout</a></li>
+                        <li class="is-active"><a>Inicio</a></li>
+                        <li><a>Buscador</a></li>
+                        <li><a href="#footer">¿Cómo funciona?</a></li>
+                        <li><a href="#map_hero">Tizapán y Altavista</a></li>
+                        <li><a href="#footer">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
@@ -83,12 +80,148 @@
     <section class="hero is-dark is-fullheight-with-navbar">
         <div class="hero-body">
             <div class="container">
-                <p class="title">
-                    Fullheight hero with navbar
-                </p>
+                <p class="title"> Encuentra tu espacio ideal </p>
+                <br>
+                <div class="columns">
+                    <div id="room_card" class="card column">
+                        <div class="card-image">
+                            <img id="img_room" src="https://bit.ly/2UroouA" alt="Room image">
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img id="profile" class="is-rounded" src="https://bit.ly/2VSVEwv"
+                                            alt="Profile image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4 has-text-black">Juan Revueltas</p>
+                                    <p class="subtitle is-6 has-text-black">Álvaro Obregón, CDMX</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Cuarto amueblado en colonia Altavista a 15 minutos del ITAM.
+                                Todos los servicios incluidos.
+                                <br>
+                                <time datetime="2019-1-1">Publicado: Enero 2019</time>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="room_card" class="card column">
+                        <div class="card-image">
+                            <img id="img_room" src="https://bit.ly/2V8BNfG" alt="Room image">
+                        </div>
+                        <div class="card-content">
+                            <div class="media">
+                                <div class="media-left">
+                                    <figure class="image is-48x48">
+                                        <img id="profile" class="is-rounded" src="https://bit.ly/2Dn0drD"
+                                            alt="Profile image">
+                                    </figure>
+                                </div>
+                                <div class="media-content">
+                                    <p class="title is-4 has-text-black">Sofía Orozco</p>
+                                    <p class="subtitle is-6 has-text-black">Benito Juárez, CDMX</p>
+                                </div>
+                            </div>
+
+                            <div class="content">
+                                Cuarto amueblado en colonia del Valle Sur, cuenta con cajon de
+                                estacionamiento e internet de alta velociad, servicios incluidos.
+                                <br>
+                                <time datetime="2019-2-1">Publicado: Febrero 2019</time>
+                            </div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
+
+    <section id="map_hero" class="hero is-primary is-fullheight-with-navbar">
+        <div class="hero-body">
+            <div id="map_container" class="container">
+                <p class="title">Cercanía con el ITAM </p>
+                <div class="columns">
+                    <div class="column">
+                        <ul class="is-size-3">
+                            <li>Llega caminando al ITAM</li>
+                            <li>Múltiples servicios en la zona: Lavanderías, Restaurantes, etc.</li>
+
+                        </ul>
+
+                    </div>
+                    <div class="column">
+                        <div id='map' class="border"></div>
+                        <script>
+                            mapboxgl.accessToken =
+                                'pk.eyJ1IjoiamFmNGsiLCJhIjoiY2pjM3JoYTY2MTVtaTJxczRvYzdndHMxaiJ9.vxWi3DCNu_dPTtMytbj0Og';
+                            var map = new mapboxgl.Map({
+                                container: 'map', // container id
+                                style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+                                center: [-99.199675, 19.344684], // starting position [lng, lat]    
+                                zoom: 15 // starting zoom
+                            });
+                        </script>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer id="footer" class="footer">
+        <div id="cont" class="columns has-text-centered">
+            <div class="column">
+                <ol>
+                    <h2 class="subtitle"><strong> AirbITAM ® 2019 </strong></h2>
+                    <p>Plataforma que conecta arrendadores de cuartos y departamentos
+                        con estudiantes del ITAM.
+                    </p>
+                </ol>
+            </div>
+            <div class="column">
+                <ol>
+                    <h2 class="subtitle"><strong>Ayuda</strong></h2>
+                    <p>Preguntas frecuentes</p>
+                    <p>Seguridad</p>
+                    <p>Requisitos</p>
+                    <p>Reglas de uso</p>
+                    <p>Aviso de privacidad</p>
+                </ol>
+            </div>
+            <div class="column">
+                <h2 class="subtitle"><strong> Contacto </strong></h2>
+                <div id="icons">
+                    <span class="icon is-large">
+                        <a href="https://github.com/adsi-itam-2019/AirbITAM">
+                            <i class="fas fa-2x fab fa-facebook"></i>
+                        </a>
+                    </span>
+                    <span class="icon is-large">
+                        <a href="https://github.com/adsi-itam-2019/AirbITAM">
+                            <i class="fas fa-2x fab fa-twitter"></i>
+                        </a>
+                    </span>
+                    <span class="icon is-large">
+                        <a href="https://github.com/adsi-itam-2019/AirbITAM">
+                            <i class="fas fa-2x fab fa-github"></i>
+                        </a>
+                    </span>
+                </div>
+                <br>
+                <span class="icon is-large">
+                    <a href="https://github.com/adsi-itam-2019/AirbITAM">
+                        <i class="fas fa-2x fa-envelope-open-text"></i>
+                    </a>
+                </span>
+                <h4><strong>ayuda@airbITAM.com</strong></h4>
+            </div>
+        </div>
+    </footer>
+
 
     <div class="modal" id="login">
         <div class="modal-background"></div>
@@ -99,6 +232,8 @@
             </header>
             <section class="modal-card-body">
                 <!-- Content ... -->
+                <p>Ingresa tus credenciales</p>
+                <br>
                 <div class="field">
                     <p class="control has-icons-left has-icons-right">
                         <input class="input is-medium" type="email" placeholder="Email">
@@ -118,27 +253,14 @@
                         </span>
                     </p>
                 </div>
-                <div class="field">
-                    <p class="control"><button class="button is-success"> Login </button></p>
-                </div>
-
-
             </section>
+
             <footer class="modal-card-foot">
                 <button class="button is-success">Inicia sesión</button>
                 <button class="button" onclick="activeModal()">Cancelar</button>
             </footer>
         </div>
     </div>
-    <footer class="footer">
-        <div class="content has-text-centered">
-            <p>
-                <strong>Bulma</strong> by <a href="https://jgthms.com">Jeremy Thomas</a>. The source code is licensed
-                <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-                is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-            </p>
-        </div>
-    </footer>
 </body>
 
 </html>
