@@ -68,108 +68,166 @@
 
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title is-size-2"> Bienvenido a AirbITAM</h1>
-                <h2 class="subtitle is-size-4">Encuentra alojamiento en CDMX con cercanía al ITAM </h2>
-                <button class="button">Busco alojamiento</button>
-                <button class="button">Ofrezco alojamiento</button>
-            </div>
-        </div>
-
-        <!-- Hero footer: will stick at the bottom -->
-        <div class="hero-foot">
-            <nav class="tabs is-boxed is-fullwidth">
-                <div class="container">
-                    <ul>
-                        <li class="is-active"><a>Inicio</a></li>
-                        <li><a href="buscador.html">Buscador</a></li>
-                        <li><a href="#footer">¿Cómo funciona?</a></li>
-                        <li><a href="#map_hero">Tizapán y Altavista</a></li>
-                        <li><a href="#footer">Contacto</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </section>
-
-    <section class="hero is-dark is-fullheight-with-navbar">
-        <div class="hero-body">
             <div class="container">
-                <p class="title"> Encuentra tu espacio ideal </p>
-                <br>
-                <div class="columns">
-                    <div id="room_card" class="card column">
-                        <div class="card-image">
-                            <img id="img_room" src="https://bit.ly/2UroouA" alt="Room image">
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-48x48">
-                                        <img id="profile" class="is-rounded" src="https://bit.ly/2VSVEwv"
-                                            alt="Profile image">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4 has-text-black">Juan Revueltas</p>
-                                    <p class="subtitle is-6 has-text-black">Álvaro Obregón, CDMX</p>
-                                </div>
-                            </div>
-
-                            <div class="content">
-                                Cuarto amueblado en colonia Altavista a 15 minutos del ITAM.
-                                Todos los servicios incluidos.
-                                <br><br>
-                                <time datetime="2019-1-1">Publicado: Enero 2019</time>
-                            </div>
-                        </div>
+                <h2 class="subtitle">Busca un espacio que se adapte a tus necesidades</h2>
+                <div class="dropdown is-hoverable">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                            <span>Precio</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
                     </div>
-
-                    <div id="room_card" class="card column">
-                        <div class="card-image">
-                            <img id="img_room" src="https://bit.ly/2V8BNfG" alt="Room image">
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-48x48">
-                                        <img id="profile" class="is-rounded" src="https://bit.ly/2Dn0drD"
-                                            alt="Profile image">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4 has-text-black">Sofía Orozco</p>
-                                    <p class="subtitle is-6 has-text-black">Benito Juárez, CDMX</p>
-                                </div>
+                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                        <div class="dropdown-content has-text-centered">
+                            <div class="dropdown-item">
+                                <strong>Rango de precio:</strong>
+                                <hr class="dropdown-divider">
+                                <input class="input is-small" placeholder="Min">
+                                <hr class="dropdown-divider">
+                                <input class="input is-small" placeholder="Max">
                             </div>
-
-                            <div class="content">
-                                Cuarto amueblado en colonia del Valle Sur, cuenta con cajon de
-                                estacionamiento e internet de alta velociad, servicios incluidos.
-                                <br><br>
-                                <time datetime="2019-2-1">Publicado: Febrero 2019</time>
+                            <div class="dropdown-item">
+                                <button class="button">Filtrar</button>
                             </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </div>
-    </section>
-
-    <section id="map_hero" class="hero is-primary is-fullheight-with-navbar">
-        <div class="hero-body">
-            <div id="map_container" class="container">
-                <p class="title">Cercanía con el ITAM </p>
-                <div class="columns">
-                    <div class="column">
-                        <ul class="is-size-3">
-                            <li>Llega caminando al ITAM</li>
-                            <li>Múltiples servicios en la zona: Lavanderías, Restaurantes, etc.</li>
-
-                        </ul>
-
+                <div class="dropdown is-hoverable">
+                    <div class="dropdown-trigger">
+                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                            <span>Distancia del ITAM</span>
+                            <span class="icon is-small">
+                                <i class="fas fa-angle-down" aria-hidden="true"></i>
+                            </span>
+                        </button>
                     </div>
+                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                        <div class="dropdown-content">
+                            <div class="dropdown-item">
+                                <strong>Refinar la búsqueda a un radio de:</strong>
+                                <a href="#" class="dropdown-item">1 KM</a>
+                                <a href="#" class="dropdown-item">2 KM</a>
+                                <a href="#" class="dropdown-item">3 KM</a>
+                                <a href="#" class="dropdown-item">4 KM</a>
+                                <a href="#" class="dropdown-item">5 KM</a>
+                                <a href="#" class="dropdown-item is-warning">No me importa si es hasta Satélite
+                                    &#128540;</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div style="padding-top: 25px;" class="columns">
                     <div class="column">
+                        <div style="height:625px; width: auto; overflow:auto;">
+                            <div id="houses" class="column" scrolling="yes">
+                                <div style="padding:15px;" class="is-white border house-card columns">
+                                    <div class="column is-three-fifths">
+                                        <strong class="has-text-black">Opción 1</strong>
+                                        <div class="has-text-centered">
+                                            <span class="icon has-text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                        </div>
+                                        <p class="has-text-black">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry</p>
+                                    </div>
+                                    <img class="column" src="https://picsum.photos/100" alt="">
+                                </div>
+                                <div style="padding:15px;" class="is-white border house-card columns">
+                                    <div class="column is-three-fifths">
+                                        <strong class="has-text-black">Opción 1</strong>
+                                        <div class="has-text-centered">
+                                            <span class="icon has-text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                        </div>
+                                        <p class="has-text-black">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry</p>
+                                    </div>
+                                    <img class="column" src="https://picsum.photos/100" alt="">
+                                </div>
+                                <div style="padding:15px;" class="is-white border house-card columns">
+                                    <div class="column is-three-fifths">
+                                        <strong class="has-text-black">Opción 1</strong>
+                                        <div class="has-text-centered">
+                                            <span class="icon has-text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                        </div>
+                                        <p class="has-text-black">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry</p>
+                                    </div>
+                                    <img class="column" src="https://picsum.photos/100" alt="">
+                                </div>
+                                <div style="padding:15px;" class="is-white border house-card columns">
+                                    <div class="column is-three-fifths">
+                                        <strong class="has-text-black">Opción 1</strong>
+                                        <div class="has-text-centered">
+                                            <span class="icon has-text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                        </div>
+                                        <p class="has-text-black">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry</p>
+                                    </div>
+                                    <img class="column" src="https://picsum.photos/100" alt="">
+                                </div>
+                                <div style="padding:15px;" class="is-white border house-card columns">
+                                    <div class="column is-three-fifths">
+                                        <strong class="has-text-black">Opción 1</strong>
+                                        <div class="has-text-centered">
+                                            <span class="icon has-text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                        </div>
+                                        <p class="has-text-black">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry</p>
+                                    </div>
+                                    <img class="column" src="https://picsum.photos/100" alt="">
+                                </div>
+                                <div style="padding:15px;" class="is-white border house-card columns">
+                                    <div class="column is-three-fifths">
+                                        <strong class="has-text-black">Opción 1</strong>
+                                        <div class="has-text-centered">
+                                            <span class="icon has-text-warning">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star-half-alt"></i>
+                                                <i class="far fa-star"></i>
+                                            </span>
+                                        </div>
+                                        <p class="has-text-black">Lorem Ipsum is simply dummy text of the printing and
+                                            typesetting industry</p>
+                                    </div>
+                                    <img class="column" src="https://picsum.photos/100" alt="">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="map_container" class="column is-two-thirds">
                         <div id='map' class="border"></div>
                         <script>
                             mapboxgl.accessToken =
@@ -178,12 +236,27 @@
                                 container: 'map', // container id
                                 style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
                                 center: [-99.199675, 19.344684], // starting position [lng, lat]    
-                                zoom: 15 // starting zoom
+                                zoom: 14 // starting zoom
                             });
                         </script>
                     </div>
                 </div>
             </div>
+        </div>
+
+        <!-- Hero footer: will stick at the bottom -->
+        <div class="hero-foot">
+            <nav class="tabs is-boxed is-fullwidth">
+                <div class="container">
+                    <ul>
+                        <li><a href="index.html">Inicio</a></li>
+                        <li class="is-active"><a>Buscador</a></li>
+                        <li><a href="#footer">¿Cómo funciona?</a></li>
+                        <li><a href="#map_hero">Tizapán y Altavista</a></li>
+                        <li><a href="#footer">Contacto</a></li>
+                    </ul>
+                </div>
+            </nav>
         </div>
     </section>
 
