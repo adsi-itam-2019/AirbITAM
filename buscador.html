@@ -70,50 +70,73 @@
         <div class="hero-body">
             <div class="container">
                 <h2 class="subtitle">Busca un espacio que se adapte a tus necesidades</h2>
-                <div class="dropdown is-hoverable">
-                    <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                            <span>Precio</span>
-                            <span class="icon is-small">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </button>
-                    </div>
-                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                        <div class="dropdown-content has-text-centered">
-                            <div class="dropdown-item">
-                                <strong>Rango de precio:</strong>
-                                <hr class="dropdown-divider">
-                                <input class="input is-small" placeholder="Min">
-                                <hr class="dropdown-divider">
-                                <input class="input is-small" placeholder="Max">
-                            </div>
-                            <div class="dropdown-item">
-                                <button class="button">Filtrar</button>
+                <div class="columns">
+                    <p class="column subtitle">Refinar búsqueda</p>
+                    <div class="column dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                <span>Precio</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                            <div class="dropdown-content has-text-centered">
+                                <div class="dropdown-item">
+                                    <strong>Rango de precio:</strong>
+                                    <hr class="dropdown-divider">
+                                    <input class="input is-small" placeholder="Min">
+                                    <hr class="dropdown-divider">
+                                    <input class="input is-small" placeholder="Max">
+                                </div>
+                                <div class="dropdown-item">
+                                    <button class="button">Filtrar</button>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="dropdown is-hoverable">
-                    <div class="dropdown-trigger">
-                        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
-                            <span>Distancia del ITAM</span>
-                            <span class="icon is-small">
-                                <i class="fas fa-angle-down" aria-hidden="true"></i>
-                            </span>
-                        </button>
+                    <div class="column dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                <span>Distancia del ITAM</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <strong>Refinar la búsqueda a un radio de:</strong>
+                                    <a href="#" class="dropdown-item">1 KM</a>
+                                    <a href="#" class="dropdown-item">2 KM</a>
+                                    <a href="#" class="dropdown-item">3 KM</a>
+                                    <a href="#" class="dropdown-item">4 KM</a>
+                                    <a href="#" class="dropdown-item">5 KM</a>
+                                    <a href="#" class="dropdown-item is-warning">No me importa si es hasta Satélite
+                                        &#128540;</a>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="dropdown-menu" id="dropdown-menu4" role="menu">
-                        <div class="dropdown-content">
-                            <div class="dropdown-item">
-                                <strong>Refinar la búsqueda a un radio de:</strong>
-                                <a href="#" class="dropdown-item">1 KM</a>
-                                <a href="#" class="dropdown-item">2 KM</a>
-                                <a href="#" class="dropdown-item">3 KM</a>
-                                <a href="#" class="dropdown-item">4 KM</a>
-                                <a href="#" class="dropdown-item">5 KM</a>
-                                <a href="#" class="dropdown-item is-warning">No me importa si es hasta Satélite
-                                    &#128540;</a>
+
+                    <div class="column dropdown is-hoverable">
+                        <div class="dropdown-trigger">
+                            <button class="button" aria-haspopup="true" aria-controls="dropdown-menu4">
+                                <span>Tipo</span>
+                                <span class="icon is-small">
+                                    <i class="fas fa-angle-down" aria-hidden="true"></i>
+                                </span>
+                            </button>
+                        </div>
+                        <div class="dropdown-menu" id="dropdown-menu4" role="menu">
+                            <div class="dropdown-content">
+                                <div class="dropdown-item">
+                                    <a href="#" class="dropdown-item">Departamento</a>
+                                    <a href="#" class="dropdown-item">Cuarto</a>
+                                    <a href="#" class="dropdown-item">Roomies</a>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -124,7 +147,7 @@
                             <div id="houses" class="column" scrolling="yes">
                                 <div style="padding:15px;" class="is-white border house-card columns">
                                     <div class="column is-three-fifths">
-                                        <strong class="has-text-black">Opción 1</strong>
+                                        <strong class="has-text-black">Departamento en San Ángel</strong>
                                         <div class="has-text-centered">
                                             <span class="icon has-text-warning">
                                                 <i class="fas fa-star"></i>
@@ -134,14 +157,17 @@
                                                 <i class="far fa-star"></i>
                                             </span>
                                         </div>
-                                        <p class="has-text-black">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry</p>
+                                        <p class="has-text-black">
+                                            Departamento compartido con 3 estudiantes, a 15 minutos caminado del ITAM
+                                        </p>
                                     </div>
-                                    <img class="column" src="https://picsum.photos/100" alt="">
+                                    <img class="column" style="width:auto; height:150px;"
+                                        src="https://www.the-connaught.co.uk/SysSiteAssets/rooms--suites/superior-queen-single-room/superior-queen-room---teaser.jpg?w=500&h=462&scale=both&mode=crop"
+                                        alt="">
                                 </div>
                                 <div style="padding:15px;" class="is-white border house-card columns">
                                     <div class="column is-three-fifths">
-                                        <strong class="has-text-black">Opción 1</strong>
+                                        <strong class="has-text-black">Cuarto en Altavista</strong>
                                         <div class="has-text-centered">
                                             <span class="icon has-text-warning">
                                                 <i class="fas fa-star"></i>
@@ -151,10 +177,13 @@
                                                 <i class="far fa-star"></i>
                                             </span>
                                         </div>
-                                        <p class="has-text-black">Lorem Ipsum is simply dummy text of the printing and
-                                            typesetting industry</p>
+                                        <p class="has-text-black">
+                                            Cuarto en casa a dos cuadras del ITAM, todos los servicios incluidos
+                                        </p>
                                     </div>
-                                    <img class="column" src="https://picsum.photos/100" alt="">
+                                    <img class="column" style="width:auto; height:100px;"
+                                        src="http://4.bp.blogspot.com/-RSAdi3NMMs8/VakWj_znRcI/AAAAAAAAAMI/lp19iktRyCw/s1600/Rent%2Broom%2Bstockholm.jpg"
+                                        alt="">
                                 </div>
                                 <div style="padding:15px;" class="is-white border house-card columns">
                                     <div class="column is-three-fifths">
@@ -227,7 +256,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="map_container" class="column is-two-thirds">
+                    <div id="map_container" class="column is-three-fifths">
                         <div id='map' class="border"></div>
                         <script>
                             mapboxgl.accessToken =
@@ -238,6 +267,13 @@
                                 center: [-99.199675, 19.344684], // starting position [lng, lat]    
                                 zoom: 14 // starting zoom
                             });
+                            map.addControl(new mapboxgl.NavigationControl(), "top-left");
+                            map.addControl(new PitchToggle({
+                                minpitchzoom: 11
+                            }), "top-left");
+                            map.addControl(ctrlPoint, "bottom-left");
+                            map.addControl(ctrlLine, "bottom-right");
+                            map.addControl(ctrlPolygon, "top-right");
                         </script>
                     </div>
                 </div>
