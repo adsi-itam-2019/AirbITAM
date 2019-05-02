@@ -9,11 +9,35 @@
     border-color: black;
 }
 
-.houses{
+.houses {
     overflow: scroll;
     height: 625px;
 }
 
-.house-card{
+.house-card {
     background-color: white;
+    padding: 15px;
+}
+
+.dropdown {
+    padding: 0px 10px 0px 10px;
+}
+
+.marker {
+    background-image: url("https://cdn0.iconfinder.com/data/icons/small-n-flat/24/678111-map-marker-512.png");
+    background-size: cover;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.mapboxgl-popup {
+    max-width: 200 px;
+}
+
+.mapboxgl-popup-content {
+    text-align: center;
+    font-family: 'Open Sans', sans - serif;
+    color: black;
 }
