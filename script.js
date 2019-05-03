@@ -1,3 +1,12 @@
+function activeModal(accion) {
+    var modal = document.getElementById(accion);
+    if (!modal.classList.contains("is-active")) {
+        modal.classList.add("is-active");
+    } else {
+        modal.classList.remove("is-active");
+    }
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);
@@ -18,21 +27,35 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 });
 
+var slideIndex = 1;
+showSlides(slideIndex);
 
-// if HTML DOM Element that contains the map is found...
-if (document.getElementById('map')){
- 
-    // Coordinates to center the map
-    var myLatlng = new google.maps.LatLng(52.525595,13.393085);
- 
-    // Other options for the map, pretty much selfexplanatory
-    var mapOptions = {
-        zoom: 14,
-        center: myLatlng,
-        mapTypeId: google.maps.MapTypeId.ROADMAP
-    };
- 
-    // Attach a map to the DOM Element, with the defined settings
-    var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+// Next/previous controls
+function plusSlides(n) {
+    showSlides(slideIndex += n);
+}
 
+// Thumbnail image controls
+function currentSlide(n) {
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {
+        slideIndex = 1
+    }
+    if (n < 1) {
+        slideIndex = slides.length
+    }
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex - 1].style.display = "block";
+    dots[slideIndex - 1].className += " active";
 }
