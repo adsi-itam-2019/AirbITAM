@@ -45,19 +45,19 @@
                     <div id="navbarMenu" class="navbar-menu">
                         <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class="button is-inverted" onclick="activeModal('register')">
+                                <a class="button is-inverted" onclick="location.href='miInformacion.html'">
                                     <span class="icon">
-                                        <i class="fas fa-user-plus"></i>
+                                        <i class="fas fa-user"></i>
                                     </span>
-                                    <span>Regístrate</span>
+                                    <span>Mi Perfil</span>
                                 </a>
                             </span>
                             <span class="navbar-item">
-                                <a class="button is-info" onclick="activeModal('login')">
+                                <a class="button is-info" onclick="location.href='index.html'">
                                     <span class="icon">
                                         <i class="fas fa-user-lock"></i>
                                     </span>
-                                    <span>Inicia sesión</span>
+                                    <span>Cerrar sesión</span>
                                 </a>
                             </span>
                         </div>
@@ -68,11 +68,32 @@
 
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
-            <div class="container has-text-centered">
-                <h1 class="title is-size-2"> Bienvenido a AirbITAM</h1>
-                <h2 class="subtitle is-size-4">Encuentra alojamiento en CDMX con cercanía al ITAM </h2>
-                <button class="button">Busco alojamiento</button>
-                <button class="button">Ofrezco alojamiento</button>
+            <div class="container">
+                <h1 class="title" style="font-size:60px"> Te podría interesar</h1>
+                <h2 class="subtitle is-size-4">A 2KM del ITAM </h2>
+                <div class="media">
+                    <div class="media-left">
+                        <img class="column" style="width:700px; height:500px; "
+                             src="https://www.ventacasas.com.mx/wp-content/uploads/2018/02/SALA.jpg" alt="">
+                    </div>
+                    <div class="media-content">
+                        <br><br>
+                        <p class="title has-text-white" style="font-size:45px">
+                            Actualmente ocupado
+                            
+                        
+                        </p>
+                        <p class="subtitle has-text-white">
+                        Se desocupa en 3 meses 
+                            <span class="icon is-medium">
+                                <span class="fa-stack">
+                                    <a class="button is-info" onclick=""><i class="fas fa-bookmark"></i></a>
+                                </span>
+                            </span>
+                        </p>
+                    </div>
+                </div>
+                
             </div>
         </div>
 
@@ -107,7 +128,7 @@
                                 <div class="media-left">
                                     <figure class="image is-48x48">
                                         <img id="profile" class="is-rounded" src="https://bit.ly/2VSVEwv"
-                                            alt="Profile image">
+                                             alt="Profile image">
                                     </figure>
                                 </div>
                                 <div class="media-content">
@@ -134,7 +155,7 @@
                                 <div class="media-left">
                                     <figure class="image is-48x48">
                                         <img id="profile" class="is-rounded" src="https://bit.ly/2Dn0drD"
-                                            alt="Profile image">
+                                             alt="Profile image">
                                     </figure>
                                 </div>
                                 <div class="media-content">
@@ -177,7 +198,7 @@
                             var map = new mapboxgl.Map({
                                 container: 'map', // container id
                                 style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-                                center: [-99.199675, 19.344684], // starting position [lng, lat]    
+                                center: [-99.199675, 19.344684], // starting position [lng, lat]
                                 zoom: 15 // starting zoom
                             });
                         </script>
@@ -192,7 +213,8 @@
             <div class="column">
                 <ol>
                     <h2 class="subtitle"><strong> AirbITAM ® 2019 </strong></h2>
-                    <p>Plataforma que conecta arrendadores de cuartos y departamentos
+                    <p>
+                        Plataforma que conecta arrendadores de cuartos y departamentos
                         con estudiantes del ITAM.
                     </p>
                 </ol>
@@ -271,7 +293,7 @@
             </section>
 
             <footer class="modal-card-foot">
-                <button class="button is-link" onclick="location.href='index_sesion.html'">Inicia sesión</button>
+                <button class="button is-link">Inicia sesión</button>
                 <button class="button" onclick="activeModal('login')">Cancelar</button>
             </footer>
         </div>
