@@ -26,13 +26,13 @@
 </head>
 
 <body>
-    <section class="hero is-link is-fullheight">
+    <section class="hero is-dark is-fullheight" style="background-color:#023546">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
             <header class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a href="index.html" class="navbar-item">
+                        <a href="index_sesion.html" class="navbar-item">
                             <!--img class="" src="logo.png" alt="Logo"-->
                             <p class="subtitle is-size-3">AirbITAM</p>
                         </a>
@@ -45,7 +45,7 @@
                     <div id="navbarMenu" class="navbar-menu">
                         <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class="button is-info" onclick="location.href='index.html'">
+                                <a class="button " onclick="location.href='index.html'">
                                     <span class="icon">
                                         <i class="fas fa-user-lock"></i>
                                     </span>
@@ -106,7 +106,7 @@
                         <div class="card-content">
                             <p class="title is-4" style="color:forestgreen">¡Estas al corriente con tu renta!</p>
                             <p class="subtitle is-6 has-text-black"><time datetime="2019-1-1">Proximo pago: 25 de Mayo</time></p>
-                            <br><br><br><br><br><br><br>
+                            <br>
                             
                             Agrega una foto de tu recibo
                             <label class="file-label">
@@ -122,22 +122,52 @@
                                 <span class="file-name">
                                     reciboPagoRenta.png
                                 </span>
+                                
                             </label>
-                        </div>
+                            <br>
+                            <span class="label has-text-black">Comentarios</span>
+                            <input class="input" type="text" placeholder="Escribe tu comentario">
+                            <label class="file-label">
+                                <br>
+                                <div class="field column">
+                                    <span class="icon has-text-warning">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                        <i class="far fa-star"></i>
+                                    </span>
+                                </div>
+                                
+</label>
+                            
+                            <div class="field is-grouped is-grouped-right">
+                                <p class="control">
+                                    <a class="button is-dark">
+                                        Agregar comentario
+                                    </a>
+                                </p>
+                            </div>
+
+</div>
                     </div>
                 </div>
             </div>
         </div>
+        
 
         <!-- Hero footer: will stick at the bottom -->
         <div class="hero-foot">
             <nav class="tabs is-boxed is-fullwidth">
                 <div class="container">
                     <ul>
-                        <li><a href="miInformacion.html">Mi Información</a></li>
-                        <li><a href="bookmarks.html">Mis Bookmarks</a></li>
+                        <li><a href="index_sesion.html">Inicio</a></li>
+                        <li><a href="buscador.html">Buscador</a></li>
+                        <li><a href="bookmarks.html">Mis Favoritos</a></li>
                         <li class="is-active"><a>Mi Renta</a></li>
-                        <li><a href="#footer">Contacto</a></li>
+                        <li><a href="#footer">¿Cómo funciona?</a></li>
                     </ul>
                 </div>
             </nav>
