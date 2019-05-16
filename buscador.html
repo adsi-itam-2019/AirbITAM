@@ -52,7 +52,7 @@
                                     <span>Regístrate</span>
                                 </a>
                             </span>
-                            <span class="navbar-item" >
+                            <span class="navbar-item">
                                 <a class="button" onclick="activeModal('login')">
                                     <span class="icon">
                                         <i class="fas fa-user-lock"></i>
@@ -142,7 +142,7 @@
                             <div id="houses" class="column" scrolling="yes">
                                 <div class="is-white border house-card columns">
                                     <a href="propiedad.html">
-                                    <div class="column is-three-fifths">
+                                        <div class="column is-three-fifths">
                                             <strong class="has-text-black">Departamento en San Ángel</strong>
                                             <div class="columns" style="padding: 15px 0 15px 0;">
                                                 <h2 class="column has-text-black"><strong>$7,500</strong></h2>
@@ -154,7 +154,7 @@
                                                     <i class="far fa-star"></i>
                                                 </span>
                                             </div>
-                                        </a>
+                                    </a>
                                     <p class="has-text-black">
                                         Departamento compartido con 3 estudiantes, a 15 minutos caminado del ITAM
                                     </p>
@@ -381,7 +381,7 @@
                 <br>
                 <div class="field">
                     <p class="control has-icons-left has-icons-right">
-                        <input class="input" type="email" placeholder="Email">
+                        <input id="email" class="input" type="email" placeholder="Email">
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>
@@ -401,7 +401,7 @@
             </section>
 
             <footer class="modal-card-foot">
-                <button class="button is-link">Inicia sesión</button>
+                <button class="button is-link" onclick="login()">Inicia sesión</button>
                 <button class="button" onclick="activeModal('login')">Cancelar</button>
             </footer>
         </div>
@@ -439,7 +439,7 @@
                 <div class="field">
                     <label class="label">Email</label>
                     <div class="control has-icons-left has-icons-right">
-                        <input class="input is-danger" type="email" placeholder="Email input" value="hello@">
+                        <input id="email" class="input is-danger" type="email" placeholder="Email input" value="hello@">
                         <span class="icon is-small is-left">
                             <i class="fas fa-envelope"></i>
                         </span>

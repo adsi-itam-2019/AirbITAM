@@ -7,6 +7,16 @@ function activeModal(accion) {
     }
 }
 
+function login(){
+    var email = document.getElementById("email");
+    if (email.value === "estudiante@itam.mx"){
+        document.location.href = "index_sesion.html";
+    } else if (email.value === "arrendador@gmail.com"){
+        document.location.href = "perfil_arrendador.html";
+    }
+
+}
+
 document.addEventListener('DOMContentLoaded', () => {
     // Get all "navbar-burger" elements
     const $navbarBurgers = Array.prototype.slice.call(document.querySelectorAll('.navbar-burger'), 0);

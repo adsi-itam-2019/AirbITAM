@@ -45,19 +45,11 @@
                     <div id="navbarMenu" class="navbar-menu">
                         <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class="button is-inverted" onclick="activeModal('register')">
-                                    <span class="icon">
-                                        <i class="fas fa-user-plus"></i>
-                                    </span>
-                                    <span>Regístrate</span>
-                                </a>
-                            </span>
-                            <span class="navbar-item">
-                                <a class="button" onclick="activeModal('login')">
+                                <a class="button" href="index.html">
                                     <span class="icon">
                                         <i class="fas fa-user-lock"></i>
                                     </span>
-                                    <span>Inicia sesión</span>
+                                    <span>Cerrar sesión</span>
                                 </a>
                             </span>
                         </div>
@@ -69,20 +61,57 @@
         <!-- Hero content: will be in the middle -->
         <div class="hero-body columns">
             <div class="container">
-                <h2 class="title">Bienvenido arrendador</h2>
-                <div class="columns">
+                <h1 class="title is-size-1">Bienvenid@ arrendador@</h1>
+                <br><br>
+                <div class="columns" scrolling="yes">
                     <div class="column is-two-thirds">
-                        <div class="hero is-success notification" style="width: 100%;">
-                            <h2 class="title">Perfil</h2>
+                        <h2 class="title has-text-centered">Tus Propiedades</h2>
+                        <div class="hero " style="width: 100%;">
+                            <div id="houses" class="column">
+                                <div class="is-white border house-card columns">
+                                    <a href="propiedad.html">
+                                        <strong class="column has-text-black">Departamento en San Ángel</strong>
+                                        <div class="column is-three-fifths">
+                                            <h2 class="column has-text-black"><strong>$7,500</strong></h2>
+                                        </div>
+                                    </a>
+                                    <p class="column has-text-black">
+                                        Departamento compartido con 3 estudiantes, a 15 minutos caminado del ITAM
+                                    </p>
+                                    <img class="column" style="width:auto; height:120px;" src="https://bit.ly/2UUQmPQ"
+                                        alt="">
+                                </div>
+
+                            </div>
                         </div>
                     </div>
-                    <div class="column">
-                        <div class="hero is-success notification" style="width: 100%;">
-                            <h2 class="title">Tus notificaciones</h2>
-                        </div>
 
+                    <div class="column" scrolling="yes">
+                        <h2 class="title has-text-centered">Tus notificaciones</h2>
+                        <div class="hero" style="width: 100%;">
+                            <div id="room_card" class="border card column">
+                                <div class="card-content">
+                                    <div class="media">
+                                        <div class="media-left">
+                                            <figure class="image is-48x48">
+                                                <img id="profile" class="is-rounded" src="https://bit.ly/2Dn0drD"
+                                                    alt="Profile image">
+                                            </figure>
+                                        </div>
+                                        <div class="media-content">
+                                            <p class="title is-4 has-text-black">María Gutiérrez</p>
+                                        </div>
+                                    </div>
+
+                                    <div class="content">
+                                        Buenos días me interesa el departamento en San Ángel
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
                 </div>
+                <button class="button"><a href="agregaCasa.html">Registrar nueva proiedad</a></button>
             </div>
         </div>
 
