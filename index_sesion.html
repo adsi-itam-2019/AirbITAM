@@ -26,13 +26,13 @@
 </head>
 
 <body>
-    <section class="hero is-link is-fullheight">
+    <section class="hero is-dark is-fullheight" style="background-color:#308CAB">
         <!-- Hero head: will stick at the top -->
-        <div class="hero-head">
+        <div class="hero-head" >
             <header class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a href="index.html" class="navbar-item">
+                        <a href="index_sesion.html" class="navbar-item">
                             <!--img class="" src="logo.png" alt="Logo"-->
                             <p class="subtitle is-size-3">AirbITAM</p>
                         </a>
@@ -53,7 +53,7 @@
                                 </a>
                             </span>
                             <span class="navbar-item">
-                                <a class="button is-info" onclick="location.href='index.html'">
+                                <a class="button" onclick="location.href='index.html'">
                                     <span class="icon">
                                         <i class="fas fa-user-lock"></i>
                                     </span>
@@ -67,7 +67,7 @@
         </div>
 
         <!-- Hero content: will be in the middle -->
-        <div class="hero-body">
+        <div class="hero-body" >
             <div class="container">
                 <h1 class="title" style="font-size:60px"> Te podría interesar</h1>
                 <h2 class="subtitle is-size-4">A 2KM del ITAM </h2>
@@ -84,10 +84,11 @@
                         
                         </p>
                         <p class="subtitle has-text-white">
-                        Se desocupa en 3 meses 
+                        Se desocupa en 3 meses  
+                        <br><br>
                             <span class="icon is-medium">
                                 <span class="fa-stack">
-                                    <a class="button is-info" onclick=""><i class="fas fa-bookmark"></i></a>
+                                    <a class="button is-light" onclick="this.style.background='#48b7db'"><i class="fas fa-heart"></i></a>
                                 </span>
                             </span>
                         </p>
@@ -104,9 +105,9 @@
                     <ul>
                         <li class="is-active"><a>Inicio</a></li>
                         <li><a href="buscador.html">Buscador</a></li>
+                        <li><a href="bookmarks.html">Mis Favoritos</a></li>
+                        <li><a href="renta.html">Mi Renta</a></li>
                         <li><a href="#footer">¿Cómo funciona?</a></li>
-                        <li><a href="#map_hero">Tizapán y Altavista</a></li>
-                        <li><a href="#footer">Contacto</a></li>
                     </ul>
                 </div>
             </nav>
@@ -114,7 +115,7 @@
     </section>
 
     <section class="hero is-dark is-fullheight-with-navbar">
-        <div class="hero-body">
+        <div class="hero-body" style="background-color:#48B7db">
             <div class="container">
                 <p class="title"> Encuentra tu espacio ideal </p>
                 <br>
@@ -177,36 +178,7 @@
         </div>
     </section>
 
-    <section id="map_hero" class="hero is-primary is-fullheight-with-navbar">
-        <div class="hero-body">
-            <div id="map_container" class="container">
-                <p class="title">Cercanía con el ITAM </p>
-                <div class="columns">
-                    <div class="column">
-                        <ul class="is-size-3">
-                            <li>Llega caminando al ITAM</li>
-                            <li>Múltiples servicios en la zona: Lavanderías, Restaurantes, etc.</li>
-
-                        </ul>
-
-                    </div>
-                    <div class="column">
-                        <div id='map' class="border"></div>
-                        <script>
-                            mapboxgl.accessToken =
-                                'pk.eyJ1IjoiamFmNGsiLCJhIjoiY2pjM3JoYTY2MTVtaTJxczRvYzdndHMxaiJ9.vxWi3DCNu_dPTtMytbj0Og';
-                            var map = new mapboxgl.Map({
-                                container: 'map', // container id
-                                style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-                                center: [-99.199675, 19.344684], // starting position [lng, lat]
-                                zoom: 15 // starting zoom
-                            });
-                        </script>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+   
 
     <footer id="footer" class="footer">
         <div id="cont" class="columns has-text-centered">
