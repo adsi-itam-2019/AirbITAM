@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -13,6 +13,9 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
+  
+    
+  
     <script>
         var sideinfoheight = 0;
         $(document).ready(function () {
@@ -274,7 +277,20 @@
                         </script>
                     </div>
                 </div>
-            </div>
+              <button class="button modal-button" data-target="#myModal" aria-haspopup="true">Mandar reservacion</button>
+              <button class="button modal-button">Añadir a favoritos</button>
+
+                <div class="modal" id="myModal">
+                  <div class="modal-background"></div>
+                  <div class="modal-content">
+                    <div class="box">Se ha mandado una alerta al arrendador ya que te intersa vistar esta propiedad. El arrendador se pondra en contacto contigo para asignar una fecha.</div>
+                  </div>
+                  <button class="modal-close is-large" aria-label="close"></button>
+                </div>
+              
+
+              
+            </div>    
         </div>
     </section>
 
@@ -318,7 +334,7 @@
                     </span>
                 </div>
                 <br>
-                <span class="icon is-large">
+                <span class="icon is-center-large">
                     <a target="_blank" href="https://github.com/adsi-itam-2019/AirbITAM">
                         <i class="fas fa-2x fa-envelope-open-text"></i>
                     </a>
@@ -330,3 +346,16 @@
 </body>
 
 </html>
+<script>
+          document.querySelectorAll('.modal-button').forEach(function(el) {
+      el.addEventListener('click', function() {
+        var target = document.querySelector(el.getAttribute('data-target'));
+
+        target.classList.add('is-active');
+
+        target.querySelector('.modal-close').addEventListener('click',   function() {
+            target.classList.remove('is-active');
+         });
+      });
+    });
+</script>
