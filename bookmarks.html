@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,13 +26,13 @@
 </head>
 
 <body>
-    <section class="hero is-link is-fullheight">
+    <section class="hero is-dark is-fullheight" style="background-color:#023546">
         <!-- Hero head: will stick at the top -->
         <div class="hero-head">
             <header class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a href="index.html" class="navbar-item">
+                        <a href="index_sesion.html" class="navbar-item">
                             <!--img class="" src="logo.png" alt="Logo"-->
                             <p class="subtitle is-size-3">AirbITAM</p>
                         </a>
@@ -45,7 +45,7 @@
                     <div id="navbarMenu" class="navbar-menu">
                         <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class="button is-info" onclick="location.href='index.html'">
+                                <a class="button" onclick="location.href='index.html'">
                                     <span class="icon">
                                         <i class="fas fa-user-lock"></i>
                                     </span>
@@ -61,13 +61,13 @@
         <!-- Hero content: will be in the middle -->
         <div class="hero-body">
             <div class="container">
-                <p class="title"> Tus Bookmarks </p>
+                <p class="title"> Tus Favoritos </p>
                 <br>
 
                 <div class="columns">
                     <div id="room_card" class="card column">
                         <div class="card-image">
-                            <img id="img_room" src="https://bit.ly/2UroouA" alt="Room image">
+                            <img id="img_room" style="width:360px; height:173px;" src="https://bit.ly/2UroouA" alt="Room image">
                         </div>
                         <div class="card-content">
                             <div class="media">
@@ -86,7 +86,7 @@
                             <div class="content">
                                 Cuarto amueblado en colonia Altavista a 15 minutos del ITAM.
                                 Todos los servicios incluidos.
-                                <br><br>
+                                <br><br><br>
                                 <time datetime="2019-1-1">Publicado: Enero 2019</time>
                             </div>
                         </div>
@@ -94,7 +94,7 @@
 
                     <div id="room_card" class="card column">
                         <div class="card-image">
-                            <img id="img_room" src="https://bit.ly/2V8BNfG" alt="Room image">
+                            <img id="img_room" style="width:360px; height:173px;" src="https://bit.ly/2V8BNfG" alt="Room image">
                         </div>
                         <div class="card-content">
                             <div class="media">
@@ -139,7 +139,7 @@
     
                                 <div class="content">
                                     Departamento en la lateral del periférico a 1.5 km del ITAM. El edificio cuenta con gimnasio.
-                                    <br><br>
+                                    <br><br><br>
                                     <time datetime="2019-2-1">Publicado: Febrero 2019</time>
                                 </div>
                             </div>
@@ -166,7 +166,7 @@
                                     <div class="content">
                                         Cuarto amueblado a dos cuadras del Metrobús Doctor Gálvez, cuenta con cajon de
                                         estacionamiento e internet.
-                                        <br><br>
+                                        <br><br><br>
                                         <time datetime="2019-2-1">Publicado: Febrero 2019</time>
                                     </div>
                                 </div>
@@ -181,10 +181,11 @@
             <nav class="tabs is-boxed is-fullwidth">
                 <div class="container">
                     <ul>
-                        <li><a href="miInformacion.html">Mi Información</a></li>
-                        <li class="is-active"><a href="bookmarks.html">Mis Bookmarks</a></li>
+                        <li><a href="index_sesion.html">Inicio</a></li>
+                        <li><a href="buscador.html">Buscador</a></li>
+                        <li class="is-active"><a>Mis Favoritos</a></li>
                         <li><a href="renta.html">Mi Renta</a></li>
-                        <li><a href="#footer">Contacto</a></li>
+                        <li><a href="#footer">¿Cómo funciona?</a></li>
                     </ul>
                 </div>
             </nav>
