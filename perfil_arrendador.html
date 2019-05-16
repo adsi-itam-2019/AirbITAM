@@ -1,4 +1,4 @@
-﻿<!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
 
 <head>
@@ -26,13 +26,13 @@
 </head>
 
 <body>
-    <section class="hero is-dark is-fullheight" style="background-color:#308CAB">
+    <section class="hero is-dark is-fullheight" style="background-color:#07779C">
         <!-- Hero head: will stick at the top -->
-        <div class="hero-head" >
+        <div class="hero-head">
             <header class="navbar">
                 <div class="container">
                     <div class="navbar-brand">
-                        <a href="index_sesion.html" class="navbar-item">
+                        <a href="index.html" class="navbar-item">
                             <!--img class="" src="logo.png" alt="Logo"-->
                             <p class="subtitle is-size-3">AirbITAM</p>
                         </a>
@@ -45,19 +45,19 @@
                     <div id="navbarMenu" class="navbar-menu">
                         <div class="navbar-end">
                             <span class="navbar-item">
-                                <a class="button is-inverted" onclick="location.href='miInformacion.html'">
+                                <a class="button is-inverted" onclick="activeModal('register')">
                                     <span class="icon">
-                                        <i class="fas fa-user"></i>
+                                        <i class="fas fa-user-plus"></i>
                                     </span>
-                                    <span>Mi Perfil</span>
+                                    <span>Regístrate</span>
                                 </a>
                             </span>
                             <span class="navbar-item">
-                                <a class="button" onclick="location.href='index.html'">
+                                <a class="button" onclick="activeModal('login')">
                                     <span class="icon">
                                         <i class="fas fa-user-lock"></i>
                                     </span>
-                                    <span>Cerrar sesión</span>
+                                    <span>Inicia sesión</span>
                                 </a>
                             </span>
                         </div>
@@ -67,126 +67,33 @@
         </div>
 
         <!-- Hero content: will be in the middle -->
-        <div class="hero-body" >
+        <div class="hero-body columns">
             <div class="container">
-                <h1 class="title" style="font-size:60px"> Te podría interesar</h1>
-                <h2 class="subtitle is-size-4">A 2KM del ITAM </h2>
-                <div class="media">
-                    <div class="media-left">
-                        <img class="column" style="width:700px; height:500px; "
-                             src="https://www.ventacasas.com.mx/wp-content/uploads/2018/02/SALA.jpg" alt="">
-                    </div>
-                    <div class="media-content">
-                        <br><br>
-                        <p class="title has-text-white" style="font-size:45px">
-                            Actualmente ocupado
-                            
-                        
-                        </p>
-                        <p class="subtitle has-text-white">
-                        Se desocupa en 3 meses  
-                        <br><br>
-                            <span class="icon is-medium">
-                                <span class="fa-stack">
-                                    <a class="button is-light" onclick="this.style.background='#48b7db'"><i class="fas fa-heart"></i></a>
-                                </span>
-                            </span>
-                        </p>
-                    </div>
-                </div>
-                
-            </div>
-        </div>
-
-        <!-- Hero footer: will stick at the bottom -->
-        <div class="hero-foot">
-            <nav class="tabs is-boxed is-fullwidth">
-                <div class="container">
-                    <ul>
-                        <li class="is-active"><a>Inicio</a></li>
-                        <li><a href="buscador_sesion.html">Buscador</a></li>
-                        <li><a href="bookmarks.html">Mis Favoritos</a></li>
-                        <li><a href="renta.html">Mi Renta</a></li>
-                        <li><a href="#footer">¿Cómo funciona?</a></li>
-                    </ul>
-                </div>
-            </nav>
-        </div>
-    </section>
-
-    <section class="hero is-dark is-fullheight-with-navbar">
-        <div class="hero-body" style="background-color:#48B7db">
-            <div class="container">
-                <p class="title"> Encuentra tu espacio ideal </p>
-                <br>
+                <h2 class="title">Bienvenido arrendador</h2>
                 <div class="columns">
-                    <div id="room_card" class="card column">
-                        <div class="card-image">
-                            <img id="img_room" src="https://bit.ly/2UroouA" alt="Room image">
-                        </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-48x48">
-                                        <img id="profile" class="is-rounded" src="https://bit.ly/2VSVEwv"
-                                             alt="Profile image">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4 has-text-black">Juan Revueltas</p>
-                                    <p class="subtitle is-6 has-text-black">Álvaro Obregón, CDMX</p>
-                                </div>
-                            </div>
-
-                            <div class="content">
-                                Cuarto amueblado en colonia Altavista a 15 minutos del ITAM.
-                                Todos los servicios incluidos.
-                                <br><br>
-                                <time datetime="2019-1-1">Publicado: Enero 2019</time>
-                            </div>
+                    <div class="column is-two-thirds">
+                        <div class="hero is-success notification" style="width: 100%;">
+                            <h2 class="title">Perfil</h2>
                         </div>
                     </div>
-
-                    <div id="room_card" class="card column">
-                        <div class="card-image">
-                            <img id="img_room" src="https://bit.ly/2V8BNfG" alt="Room image">
+                    <div class="column">
+                        <div class="hero is-success notification" style="width: 100%;">
+                            <h2 class="title">Tus notificaciones</h2>
                         </div>
-                        <div class="card-content">
-                            <div class="media">
-                                <div class="media-left">
-                                    <figure class="image is-48x48">
-                                        <img id="profile" class="is-rounded" src="https://bit.ly/2Dn0drD"
-                                             alt="Profile image">
-                                    </figure>
-                                </div>
-                                <div class="media-content">
-                                    <p class="title is-4 has-text-black">Sofía Orozco</p>
-                                    <p class="subtitle is-6 has-text-black">Benito Juárez, CDMX</p>
-                                </div>
-                            </div>
 
-                            <div class="content">
-                                Cuarto amueblado en colonia del Valle Sur, cuenta con cajon de
-                                estacionamiento e internet de alta velociad, servicios incluidos.
-                                <br><br>
-                                <time datetime="2019-2-1">Publicado: Febrero 2019</time>
-                            </div>
-                        </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
 
-   
+    </section>
 
     <footer id="footer" class="footer">
         <div id="cont" class="columns has-text-centered">
             <div class="column">
                 <ol>
                     <h2 class="subtitle"><strong> AirbITAM ® 2019 </strong></h2>
-                    <p>
-                        Plataforma que conecta arrendadores de cuartos y departamentos
+                    <p>Plataforma que conecta arrendadores de cuartos y departamentos
                         con estudiantes del ITAM.
                     </p>
                 </ol>
@@ -204,26 +111,26 @@
             <div class="column">
                 <h2 class="subtitle"><strong> Contacto </strong></h2>
                 <div id="icons">
-                    <span class="icon is-large">
+                    <span class="icon is-large" style="color:#174151">
                         <a target="_blank" href="https://github.com/adsi-itam-2019/AirbITAM">
-                            <i class="fas fa-2x fab fa-facebook"></i>
+                            <i class="fas fa-2x fab fa-facebook" style="color:#07779C"></i>
                         </a>
                     </span>
                     <span class="icon is-large">
                         <a target="_blank" href="https://github.com/adsi-itam-2019/AirbITAM">
-                            <i class="fas fa-2x fab fa-twitter"></i>
+                            <i class="fas fa-2x fab fa-twitter" style="color:#07779C"></i>
                         </a>
                     </span>
                     <span class="icon is-large">
                         <a target="_blank" href="https://github.com/adsi-itam-2019/AirbITAM">
-                            <i class="fas fa-2x fab fa-github"></i>
+                            <i class="fas fa-2x fab fa-github" style="color:#07779C"></i>
                         </a>
                     </span>
                 </div>
                 <br>
                 <span class="icon is-large">
                     <a target="_blank" href="https://github.com/adsi-itam-2019/AirbITAM">
-                        <i class="fas fa-2x fa-envelope-open-text"></i>
+                        <i class="fas fa-2x fa-envelope-open-text" style="color:#07779C"></i>
                     </a>
                 </span>
                 <h4><strong>ayuda@airbITAM.com</strong></h4>
