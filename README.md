@@ -4,13 +4,14 @@ Encuentra alojamiento con cercanía al ITAM.
 ## Pasos para el demo
 
 Ingresar a [AirbITAM](https://adsi-itam-2019.github.io/AirbITAM/)
-* Si las vistas se ven amontonadas realizar un zoom-out
+* :white_check_mark: Responsivo
+* :warning: Si las vistas se ven amontonadas en desktop realizar un zoom-out
 
 ### Experiencia del arrendador
 1. Dar click en "Inicia Sesión"
 2. En el campo de correo ingresar arrendador@gmail.com, en contraseña "123"
 3. Dar click en "Registrar nueva propiedad"
-4. Llenar campos con datos random y dar click en "Agregar propiedad
+4. Llenar campos con datos random y dar click en "Agregar propiedad"
 5. Dar click en cerrar sesión
 
 ### Experiencia del usuario
