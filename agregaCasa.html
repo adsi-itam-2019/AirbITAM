@@ -16,16 +16,32 @@
 <body onload="plusSlides(0)">
     <section class="hero is-black is-fullheight" style="background-color:#07779C">
         <div class="container">
-
             <!-- Hero head: will stick at the top -->
             <div class="hero-head">
                 <header class="navbar">
                     <div class="container">
                         <div class="navbar-brand">
-                            <a href="index.html" class="navbar-item">
+                            <a href="index_sesion.html" class="navbar-item">
                                 <!--img class="" src="logo.png" alt="Logo"-->
                                 <p class="subtitle is-size-3">AirbITAM</p>
                             </a>
+                            <span class="navbar-burger burger has-text-white" data-target="navbarMenu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="navbarMenu" class="navbar-menu">
+                            <div class="navbar-end">
+                                <span class="navbar-item">
+                                    <a class="button " onclick="location.href='index.html'">
+                                        <span class="icon">
+                                            <i class="fas fa-user-lock"></i>
+                                        </span>
+                                        <span>Cerrar sesión</span>
+                                    </a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -39,26 +55,14 @@
                         <h2 class="subtitle">Registrarse</h2>
                         <div class="field is-horizontal">
                             <div class="field-label is-normal">
-                                <label class="label">Nombre</label>
+                                <label class="label">Título del anuncio</label>
                             </div>
                             <div class="field-body">
                                 <div class="field">
                                     <p class="control is-expanded has-icons-left">
-                                        <input class="input" type="text" placeholder="Nombre Completo">
+                                        <input class="input" type="text" placeholder="">
                                         <span class="icon is-small is-left">
                                             <i class="fas fa-user"></i>
-                                        </span>
-                                    </p>
-                                </div>
-                                <div class="field">
-                                    <p class="control is-expanded has-icons-left has-icons-right">
-                                        <input class="input is-success" type="email" placeholder="Email"
-                                            value="">
-                                        <span class="icon is-small is-left">
-                                            <i class="fas fa-envelope"></i>
-                                        </span>
-                                        <span class="icon is-small is-right">
-                                            <i class="fas fa-check"></i>
                                         </span>
                                     </p>
                                 </div>
@@ -79,7 +83,6 @@
                                             <input class="input" type="tel" placeholder="Tu número de teléfono">
                                         </p>
                                     </div>
-                                    <p class="help">Do not enter the first zero</p>
                                 </div>
                             </div>
                         </div>
@@ -130,8 +133,7 @@
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control">
-                                        <input class="input is-warning" type="text"
-                                            placeholder="Dirección">
+                                        <input class="input is-warning" type="text" placeholder="Dirección">
                                     </div>
                                     <p class="help is-warning">
                                         * No se compartirá dirección específica con nadie
@@ -147,7 +149,8 @@
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control">
-                                        <textarea class="textarea" placeholder="Agrega detalles sobre el imbueble y el entorno"></textarea>
+                                        <textarea class="textarea"
+                                            placeholder="Agrega detalles sobre el imbueble y el entorno"></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -160,9 +163,11 @@
                             <div class="field-body">
                                 <div class="field">
                                     <div class="control">
-                                        <button class="button is-primary is-medium" href="perfil_arrendador.html">
-                                            Agregar propiedad
-                                        </button>
+                                        <a href="perfil_arrendador.html">
+                                            <button class="button is-medium">
+                                                Agregar propiedad
+                                            </button>
+                                        </a>
                                     </div>
                                 </div>
                             </div>
