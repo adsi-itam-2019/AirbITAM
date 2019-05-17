@@ -13,9 +13,9 @@
     <script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.53.1/mapbox-gl.js'></script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
     <script type="text/javascript" src="script.js"></script>
-  
-    
-  
+
+
+
     <script>
         var sideinfoheight = 0;
         $(document).ready(function () {
@@ -69,10 +69,35 @@
                 <header class="navbar">
                     <div class="container">
                         <div class="navbar-brand">
-                            <a href="index.html" class="navbar-item">
+                            <a href="index_sesion.html" class="navbar-item">
                                 <!--img class="" src="logo.png" alt="Logo"-->
                                 <p class="subtitle is-size-3">AirbITAM</p>
                             </a>
+                            <span class="navbar-burger burger has-text-white" data-target="navbarMenu">
+                                <span></span>
+                                <span></span>
+                                <span></span>
+                            </span>
+                        </div>
+                        <div id="navbarMenu" class="navbar-menu">
+                            <div class="navbar-end">
+                                <span class="navbar-item">
+                                    <a class="button is-inverted" onclick="location.href='miInformacion.html'">
+                                        <span class="icon">
+                                            <i class="fas fa-user"></i>
+                                        </span>
+                                        <span>Mi Perfil</span>
+                                    </a>
+                                </span>
+                                <span class="navbar-item">
+                                    <a class="button" onclick="location.href='index.html'">
+                                        <span class="icon">
+                                            <i class="fas fa-user-lock"></i>
+                                        </span>
+                                        <span>Cerrar sesión</span>
+                                    </a>
+                                </span>
+                            </div>
                         </div>
                     </div>
                 </header>
@@ -277,20 +302,21 @@
                         </script>
                     </div>
                 </div>
-              <button class="button modal-button" data-target="#myModal" aria-haspopup="true">Mandar reservacion</button>
-              <button class="button modal-button">Añadir a favoritos</button>
+                <button class="button modal-button" data-target="#myModal" aria-haspopup="true">Solicitar cita</button>
+                <button class="button modal-button">Añadir a favoritos</button>
 
                 <div class="modal" id="myModal">
-                  <div class="modal-background"></div>
-                  <div class="modal-content">
-                    <div class="box">Se ha mandado una alerta al arrendador. El arrendador se pondrá en contacto contigo para asignar una fecha.</div>
-                  </div>
-                  <button class="modal-close is-large" aria-label="close"></button>
+                    <div class="modal-background"></div>
+                    <div class="modal-content">
+                        <div class="box">Se ha mandado una alerta al arrendador. El arrendador se pondrá en contacto
+                            contigo para asignar una fecha.</div>
+                    </div>
+                    <button class="modal-close is-large" aria-label="close"></button>
                 </div>
-              
 
-              
-            </div>    
+
+
+            </div>
         </div>
     </section>
 
@@ -347,15 +373,15 @@
 
 </html>
 <script>
-          document.querySelectorAll('.modal-button').forEach(function(el) {
-      el.addEventListener('click', function() {
-        var target = document.querySelector(el.getAttribute('data-target'));
+    document.querySelectorAll('.modal-button').forEach(function (el) {
+        el.addEventListener('click', function () {
+            var target = document.querySelector(el.getAttribute('data-target'));
 
-        target.classList.add('is-active');
+            target.classList.add('is-active');
 
-        target.querySelector('.modal-close').addEventListener('click',   function() {
-            target.classList.remove('is-active');
-         });
-      });
+            target.querySelector('.modal-close').addEventListener('click', function () {
+                target.classList.remove('is-active');
+            });
+        });
     });
 </script>
