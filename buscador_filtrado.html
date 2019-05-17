@@ -52,7 +52,7 @@
                                     <span>Regístrate</span>
                                 </a>
                             </span>
-                            <span class="navbar-item" >
+                            <span class="navbar-item">
                                 <a class="button" onclick="activeModal('login')">
                                     <span class="icon">
                                         <i class="fas fa-user-lock"></i>
@@ -134,124 +134,137 @@
                             </div>
                         </div>
                     </div>
-                    <div> 
-                            <button class="button"><a href="buscador_filtrado.html">Filtrar</a></button>
-                            <button class="button"><a href="buscador.html">Remover filtros</a></button>
+                    <div>
+                        <button class="button"><a href="buscador_filtrado.html">Filtrar</a></button>
+                        <button class="button"><a href="buscador.html">Remover filtros</a></button>
                     </div>
                 </div>
                 <div style="padding-top: 25px;" class="columns">
-                    <div class="column">
-                        <div style="height:625px; width: auto; overflow:auto;">
-                            <div id="houses" class="column" scrolling="yes">
-                                <div class="is-white border house-card columns">
-                                    <a href="propiedad.html">
-                                    <div class="column is-three-fifths">
-                                            <strong class="has-text-black">Departamento en San Ángel</strong>
-                                            <div class="columns" style="padding: 15px 0 15px 0;">
-                                                <h2 class="column has-text-black"><strong>$7,500</strong></h2>
-                                                <span class="column icon has-text-warning">
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star"></i>
-                                                    <i class="fas fa-star-half-alt"></i>
-                                                    <i class="far fa-star"></i>
-                                                </span>
+                        <div class="column">
+                                <div style="height:625px; width: auto; overflow:auto;">
+                                    <div id="houses" class="column" scrolling="yes">
+                                        <div class="is-white border house-card">
+                                            <a href="propiedad.html">
+                                                <strong class="has-text-black">Departamento en San Ángel</strong>
+                                                <div class="columns">
+                                                    <div class="column is-three-fifths">
+                                                        <div class="columns" style="padding: 15px 0 15px 0;">
+                                                            <h2 class="column has-text-black has-text-centered">
+                                                                <strong>$11,700</strong>
+                                                            </h2>
+                                                            <div class="column has-text-centered">
+                                                                <span class="icon has-text-warning">
+                                                                    <i class="fas fa-star"></i>
+                                                                    <i class="fas fa-star"></i>
+                                                                    <i class="fas fa-star"></i>
+                                                                    <i class="fas fa-star-half-alt"></i>
+                                                                    <i class="far fa-star"></i>
+                                                                </span>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                    <img class="column" style="width:auto; height:120px;"
+                                                        src="https://bit.ly/2UUQmPQ" alt="">
+                                                </div>
+                                                <p class="has-text-black">
+                                                    Cuarto en casa a dos cuadras del ITAM, todos los servicios incluidos
+                                                </p>
+                                            </a>
+                                        </div>
+        
+                                        <div class="is-white border house-card">
+                                            <strong class="has-text-black">Cuarto en Altavista</strong>
+                                            <div class="columns">
+                                                <div class="column is-three-fifths">
+                                                    <div class="columns" style="padding: 15px 0 15px 0;">
+                                                        <h2 class="column has-text-black has-text-centered">
+                                                            <strong>$4,700</strong>
+                                                        </h2>
+                                                        <div class="column has-text-centered">
+                                                            <span class="icon has-text-warning">
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star"></i>
+                                                                <i class="fas fa-star-half-alt"></i>
+                                                                <i class="far fa-star"></i>
+                                                            </span>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <img class="column" style="width:25%; height:50%;" src="https://bit.ly/2Vh1J9S">
                                             </div>
-                                        </a>
-                                    <p class="has-text-black">
-                                        Departamento compartido con 3 estudiantes, a 15 minutos caminado del ITAM
-                                    </p>
-                                </div>
-                                <img class="column" style="width:auto; height:120px;" src="https://bit.ly/2UUQmPQ"
-                                    alt="">
-                            </div>
-                            <div class="is-white border house-card columns">
-                                <div class="column is-three-fifths">
-                                    <strong class="has-text-black">Cuarto en Altavista</strong>
-                                    <div class="columns" style="padding: 15px 0 15px 0;">
-                                        <h2 class="column has-text-black"><strong>$5,200</strong></h2>
-                                        <span class="column icon has-text-warning">
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star"></i>
-                                            <i class="fas fa-star-half-alt"></i>
-                                            <i class="far fa-star"></i>
-                                        </span>
+                                            <p class="has-text-black">
+                                                Cuarto en casa a dos cuadras del ITAM, todos los servicios incluidos
+                                            </p>
+                                        </div>
                                     </div>
-                                    <p class="has-text-black">
-                                        Cuarto en casa a dos cuadras del ITAM, todos los servicios incluidos
-                                    </p>
                                 </div>
-                                <img class="column" style="width:auto; height:120px;" src="https://bit.ly/2Vh1J9S"
-                                    alt="">
                             </div>
-                            
-                        </div>
+
+                    <div id="map_container" class="column is-three-fifths">
+                        <div id='map' class="border"></div>
+                        <script>
+                            mapboxgl.accessToken =
+                                'pk.eyJ1IjoiamFmNGsiLCJhIjoiY2pjM3JoYTY2MTVtaTJxczRvYzdndHMxaiJ9.vxWi3DCNu_dPTtMytbj0Og';
+                            var map = new mapboxgl.Map({
+                                container: 'map', // container id
+                                style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
+                                center: [-99.199675, 19.344684], // starting position [lng, lat]    
+                                zoom: 14 // starting zoom
+                            });
+                            map.addControl(new mapboxgl.NavigationControl(), "top-left");
+                            var geojson = {
+                                type: 'FeatureCollection',
+                                features: [{
+                                        type: 'Feature',
+                                        geometry: {
+                                            type: 'Point',
+                                            coordinates: [-99.189646, 19.346251]
+                                        },
+                                        properties: {
+                                            title: 'Cuarto en casa compartida',
+                                            description: 'Cerca de MB La Bombilla $7,200'
+                                        }
+                                    },
+                                    {
+                                        type: 'Feature',
+                                        geometry: {
+                                            type: 'Point',
+                                            coordinates: [-99.197063, 19.340914]
+                                        },
+                                        properties: {
+                                            title: 'Departamento',
+                                            description: 'Incluye cajón de estacionamiento $12,000'
+                                        }
+                                    },
+                                ]
+                            };
+                            // add markers to map
+                            geojson.features.forEach(function (marker) {
+
+                                // create a HTML element for each feature
+                                var el = document.createElement('div');
+                                el.className = 'marker';
+
+                                // make a marker for each feature and add to the map
+                                new mapboxgl.Marker(el)
+                                    .setLngLat(marker.geometry.coordinates)
+                                    .addTo(map);
+                                new mapboxgl.Marker(el)
+                                    .setLngLat(marker.geometry.coordinates)
+                                    .setPopup(new mapboxgl.Popup({
+                                            offset: 25
+                                        }) // add popups
+                                        .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker
+                                            .properties
+                                            .description + '</p>'))
+                                    .addTo(map);
+                            });
+                        </script>
                     </div>
                 </div>
-                <div id="map_container" class="column is-three-fifths">
-                    <div id='map' class="border"></div>
-                    <script>
-                        mapboxgl.accessToken =
-                            'pk.eyJ1IjoiamFmNGsiLCJhIjoiY2pjM3JoYTY2MTVtaTJxczRvYzdndHMxaiJ9.vxWi3DCNu_dPTtMytbj0Og';
-                        var map = new mapboxgl.Map({
-                            container: 'map', // container id
-                            style: 'mapbox://styles/mapbox/streets-v11', // stylesheet location
-                            center: [-99.199675, 19.344684], // starting position [lng, lat]    
-                            zoom: 14 // starting zoom
-                        });
-                        map.addControl(new mapboxgl.NavigationControl(), "top-left");
-                        var geojson = {
-                            type: 'FeatureCollection',
-                            features: [{
-                                    type: 'Feature',
-                                    geometry: {
-                                        type: 'Point',
-                                        coordinates: [-99.189646, 19.346251]
-                                    },
-                                    properties: {
-                                        title: 'Cuarto en casa compartida',
-                                        description: 'Cerca de MB La Bombilla $7,200'
-                                    }
-                                },
-                                {
-                                    type: 'Feature',
-                                    geometry: {
-                                        type: 'Point',
-                                        coordinates: [-99.197063, 19.340914]
-                                    },
-                                    properties: {
-                                        title: 'Departamento',
-                                        description: 'Incluye cajón de estacionamiento $12,000'
-                                    }
-                                },
-                            ]
-                        };
-                        // add markers to map
-                        geojson.features.forEach(function (marker) {
-
-                            // create a HTML element for each feature
-                            var el = document.createElement('div');
-                            el.className = 'marker';
-
-                            // make a marker for each feature and add to the map
-                            new mapboxgl.Marker(el)
-                                .setLngLat(marker.geometry.coordinates)
-                                .addTo(map);
-                            new mapboxgl.Marker(el)
-                                .setLngLat(marker.geometry.coordinates)
-                                .setPopup(new mapboxgl.Popup({
-                                        offset: 25
-                                    }) // add popups
-                                    .setHTML('<h3>' + marker.properties.title + '</h3><p>' + marker
-                                        .properties
-                                        .description + '</p>'))
-                                .addTo(map);
-                        });
-                    </script>
-                </div>
             </div>
-        </div>
+
         </div>
 
         <!-- Hero footer: will stick at the bottom -->
